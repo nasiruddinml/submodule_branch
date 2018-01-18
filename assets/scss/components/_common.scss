@@ -1,0 +1,67 @@
+@for $i from 0 through 40 {
+  .taxi-mt-#{$i * 5} {
+    margin-top: 5px * $i;
+  }
+  .taxi-mr-#{$i * 5} {
+    margin-right: 5px * $i;
+  }
+  .taxi-mb-#{$i * 5} {
+    margin-bottom: 5px * $i;
+  }
+  .taxi-ml-#{$i * 5} {
+    margin-left: 5px * $i;
+  }
+  .taxi-pt-#{$i * 5} {
+    padding-top: 5px * $i;
+  }
+  .taxi-pr-#{$i * 5} {
+    padding-right: 5px * $i;
+  }
+  .taxi-pb-#{$i * 5} {
+    padding-bottom: 5px * $i;
+  }
+  .taxi-pl-#{$i * 5} {
+    padding-left: 5px * $i;
+  }
+}
+
+$spaceamounts: ( 0, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
+$sides: ( top, bottom, left, right); // Leave this variable alone
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+.d-i-b {
+  display: inline-block !important;
+}
+
+
+/* global */
+
+body {
+  background-color: $theme-accent-bg-color;
+}
+
+a {
+  color: $theme-accent-color;
+}
+
+input,
+// select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.m-grid.m-grid-demo .m-grid-col {
+  border: 0;
+  background: transparent;
+  height: 30px;
+}

@@ -1,0 +1,31 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+$footer-height: 83px;
+$footer-height-xs: 128px;
+$footer-background-color: #f5f5f5;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: $footer-height !important;
+}
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: $footer-height;
+  background-color: $footer-background-color;
+}
+
+@media (max-width: $screen-xs-max) { /* 767px */
+  body {
+    margin-bottom: $footer-height-xs !important;
+  }
+  .page-footer {
+    height: $footer-height-xs;
+  }
+}

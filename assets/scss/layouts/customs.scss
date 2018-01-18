@@ -1,0 +1,270 @@
+.label {
+  &.label-xs {
+    padding: 2px 6px;
+    margin-left: 5px;
+    font-weight: 300;
+    font-size: 10px;
+    color: #fff;
+    vertical-align: 2px;
+  }
+}
+
+.title {
+  &.taxi-title-h3 {
+    margin: 15px 0;
+    min-height: 48px;
+    border-bottom: 1px solid $grey-default;
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
+    .caption {
+      display: inline-block;
+      padding: 10px 0;
+      color: $gray-dark;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.form-control {
+  transition: border-color .3s;
+  &:focus {
+    border-color: $blue-input-outline-focus;
+  }
+}
+
+
+/* top page */
+
+.mt-comments .mt-comment .mt-comment-body .mt-comment-text {
+  color: $gray-dark;
+}
+
+.jcrop-holder {
+  margin: auto;
+}
+
+.preview-pane-title {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#preview-pane {
+  display: inline-block;
+  position: static;
+  margin-top: 85px;
+  border: 1px solid $grey-border;
+  box-shadow: none;
+  @media screen and (max-width: $screen-xs-max) {
+    margin-top: 30px;
+  }
+}
+
+#preview-pane .preview-container {
+  border: 1px solid $grey-border;
+}
+
+.cropper-title {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 5px;
+  font-weight: 900;
+}
+
+
+/* detail page */
+
+.taxi-detail-table {
+  .col-inner {
+    padding: 8px;
+  }
+}
+
+
+/* register, edit, confirm page */
+
+.portlet.taxi-portlet {
+  textarea {
+    white-space: normal;
+  }
+  .form-actions {
+    text-align: center;
+    background-color: $theme-main-color;
+    border-top: 0;
+    padding: 15px;
+    .btn {
+      margin: 0 7.5px 15px;
+    }
+  }
+  .thumbnail-form {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    .fileinput {
+      margin-right: 15px;
+    }
+    .fileinput-btn {
+      margin-bottom: 5px;
+    }
+  }
+  .date-picker {
+    .btn {
+      border: 1px solid $bootstrap-gray-input-outline;
+    }
+  }
+  .has-error {
+    .date-picker {
+      .btn {
+        background-color: $pink-error-bg;
+        border: 1px solid $red-error;
+      }
+      .fa-calendar {
+        color: $red-error !important;
+      }
+    }
+  }
+  .form-control {
+    &:disabled {
+      border: 0;
+      background-color: transparent;
+      pointer-events: none;
+      cursor: auto;
+    }
+  }
+  .information-tips {
+    font-size: 12px;
+  }
+}
+
+.page-content-wrapper {
+  .page-content {
+    .page-title {
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.taxi-nav-tabs--flex {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  overflow-x: auto;
+  >li {
+    flex: 0 0 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.nav-tabs .tab {
+  padding: 6px 12px 12px !important;
+}
+
+
+/* TX170 */
+
+.form-group {
+  &.row {
+    .control-label {
+      line-height: 34px;
+    }
+  }
+}
+
+// new left align style layout for form
+.row-custom {
+  clear: both;
+  margin-bottom: 20px;
+  .form-group {
+    width: calc(100%/3);
+    padding-right: 20px;
+    float: left;
+    label {
+      min-width: 120px;
+    }
+    .empty {
+      display: none;
+    }
+  }
+}
+
+// custom select menu style
+.select-style {
+  display: inline-flex;
+  border: 1px solid #ccc;
+  width: 174px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fafafa url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 94% 50%;
+  select {
+    padding: 6px 8px 7px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1306px) {
+  .row-custom .form-group {
+    .empty {
+      display: block;
+    }
+    label {
+      display: block;
+    }
+    .select-style {
+      display: block;
+      width: 100%;
+    }
+    input {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.section-title {
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 20px;
+  h3 {
+    margin: 0;
+    padding: 3px 0 20px;
+    display: inline-block;
+    font-size: 16px;
+  }
+}
+
+.half-width {
+  width: 250px;
+}
+
+.profile-title {
+  color: $theme-accent-color;
+  margin: 0 0 20px;
+  font-size: 20px;
+  line-height: 1.25;
+  .label {
+    margin-left: 5px;
+    font-size: 10px;
+    vertical-align: 3px;
+  }
+}
+
+.label {
+  border-radius: 1px;
+}

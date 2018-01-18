@@ -1,0 +1,102 @@
+.btn {
+  transition: background-color 0.3s, color 0.3s;
+  &.btn-circle {
+    padding: 8px 16px;
+  }
+  &.btn-large {
+    padding: 8px 40px;
+    min-width: 240px;
+    @media (max-width: $screen-phone) {
+      display: block;
+      width: 100%;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+  &.btn-action-primary {
+      background: #fff;
+      border-color: $theme-accent-color;
+	  color: $theme-accent-color;
+	  border-radius: 0;
+      &:hover {
+        background: $theme-accent-color;
+		color: #fff;
+      }
+  }
+  &.btn-action-secondary {
+      background: #fff;
+	  border-radius: 0;
+      border-color: $theme-accent-btn-2nd-color;
+	  color: $theme-accent-btn-2nd-color;
+      &:hover {
+        background: $theme-accent-btn-2nd-color;
+		color: #fff;
+      }
+		
+  }
+
+  &.btn-primary {
+    background: $theme-accent-color;
+    border-color: darken($theme-accent-color, 2%);
+    &:hover {
+      background: darken($theme-accent-color, 15%);
+    }
+    &:active {
+      border-color: darken($theme-accent-color, 4%);
+    }
+  }
+  &.btn-custom {
+    border-color: $theme-accent-color-dark-light;
+    &:hover {
+      background: $theme-accent-color-dark-light;
+      color: #fff;
+    }
+    &:active {
+      border-color: $theme-accent-color;
+    }
+  }
+  &.btn-custom-round {
+    border-color: $theme-accent-color;
+    background: #fff;
+    &:hover {
+      background: $theme-accent-color;
+      color: #fff;
+    }
+    &:active {
+      border-color: $theme-accent-color;
+    }
+  }
+  &.custom-color {
+    &.btn-outline {
+      color: $gray;
+      background: $theme-main-color;
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+      &.green {
+        &:hover,
+        &:focus {
+          background-color: $green-button-hover;
+        }
+      }
+    }
+  }
+  @at-root .button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .button-group & {
+    margin: 0 7.5px 15px;
+    @media (max-width: $screen-phone) {
+      &.btn-primary {
+        order: 1;
+      }
+      &.btn-default {
+        order: 2;
+      }
+    }
+  }
+}

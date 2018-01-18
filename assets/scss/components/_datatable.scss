@@ -1,0 +1,220 @@
+@mixin clearFix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    display: block;
+    clear: both;
+    height: 1px;
+    margin-top: -1px;
+    visibility: hidden;
+  }
+  & {
+    *zoom: 1;
+  }
+}
+
+$white: #fff;
+
+.table-scrollable {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid #e7ecf1;
+  margin: 10px 0 !important;
+}
+.table-scrollable__ {
+  @include clearFix();
+}
+#dataTable-example {
+  position: relative;
+  //height: auto !important;
+  @include clearFix();
+}
+
+th,
+td {
+  height: 40px;
+}
+
+table {
+  margin-bottom: 0 !important;
+}
+
+td.action div {
+  width: 135px;
+  text-align: center;
+}
+
+.data-table-container {
+  position: relative;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.data-table-left {
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  table {
+    th,
+    td {
+      background-color: $white;
+    }
+  }
+}
+
+.data-table-center {
+  z-index: 1;
+  width: 100% !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: scroll;
+  overflow-y: hidden;
+}
+
+.data-table-right {
+  z-index: 1000;
+  position: absolute;
+  float: right;
+  right: 0;
+  top: 0;
+  table {
+    th,
+    td {
+      background-color: $white;
+    }
+  }
+}
+
+/** scrollable table */
+
+table.dataTable {
+  clear: both;
+  margin: 0 !important;
+  thead th {
+    background-color: #e5eff6 !important;
+    &:first-child,
+    &:nth-child(9) {
+      background: none;
+    }
+  }
+}
+
+/** scrollable table - Body */
+
+.dataTables_scroll {
+  margin-bottom: 0;
+}
+
+.dataTable .detail-control {
+  border-radius: 50% !important;
+  border: 1px solid #687991;
+  outline: 0;
+  font-size: 10px;
+  color: #687991;
+  background-color: transparent;
+  padding: 2px 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.dataTable.no-childrow .detail-control {
+  opacity: 0.4;
+  cursor: auto;
+  pointer-events: none;
+}
+
+/** scrollable table - Child row */
+.child-table div {
+  display: flex;
+  > div {
+    &:first-child {
+      background-color: red !important;
+    }
+  }
+}
+
+.dataTables_scrollBody .dataTable > tbody > tr > td {
+  padding: 0;
+}
+
+.dataTables_scrollBody .dataTable > tbody > tr.odd > td,
+.dataTables_scrollBody .dataTable > tbody > tr.even > td {
+  padding: 8px 10px;
+}
+
+table.child-table tr {
+  background-color: transparent !important;
+}
+
+table.child-table .column-label {
+  background-color: $theme-accent-toolbar-color !important;
+  border-right: 1px solid #ddd;
+}
+table.child-table .column-label {
+  width: 15%;
+  text-align: left;
+  padding-left: 10px;
+}
+
+table.child-table .column-value {
+  width: 85%;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/** fixed columns - Header */
+
+.DTFC_LeftHeadWrapper,
+.DTFC_RightHeadWrapper {
+  border-bottom: 2px solid #e7ecf1;
+}
+
+.DTFC_LeftHeadWrapper table.dataTable th,
+.DTFC_RightHeadWrapper table.dataTable th {
+  border-bottom: 0 !important;
+}
+
+/** fixed columns - Body */
+
+.DTFC_LeftBodyWrapper,
+.DTFC_RightBodyWrapper {
+  height: auto !important;
+}
+
+.data-table-right,
+.data-table-right {
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+/** fixed columns - Child row */
+
+.cloneRow,
+.cloneRow * {
+  background-color: transparent !important;
+  pointer-events: none;
+}
+
+table.dataTable tbody tr.cloneRow > td {
+  padding: 0;
+}
+table.dataTable thead th {
+  background-color: #edecec !important;
+}
+
+
+// toolbar
+.temp-top{
+  z-index: 10000;
+}
+.fixed-table-toolbar {
+  margin-bottom: 10px;
+  @include clearFix();
+}

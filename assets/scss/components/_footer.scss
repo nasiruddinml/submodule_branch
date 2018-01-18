@@ -1,0 +1,45 @@
+.page-footer {
+  background: $theme-main-color;
+  border-top: 1px solid $theme-accent-color;
+  .page-footer-inner {
+    .contact-information {
+      margin: 10px 15px 0;
+      span {
+        display: block;
+        font-size: 12px;
+        line-height: 1.2;
+        &:nth-child(2) {
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .footer-link-wrapper {
+    float: right;
+    padding: 23px 15px;
+    list-style: none;
+    @media screen and (max-width: $screen-xs-max) {
+      width: 100%;
+      padding: 0 15px;
+    }
+    >li {
+      display: inline-block;
+      font-size: 0;
+      &::after {
+        content: "|";
+        margin: 0 15px;
+        font-size: 14px;
+        color: $grey-border;
+      }
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
