@@ -1,4 +1,4 @@
-//## Bootstrap 
+//## Bootstrap
 //
 // Core bootstrap variables and mixins
 @import "colors";
@@ -62,21 +62,21 @@ $zindex-top: 10100;
 //Define the breakpoints at which your layout will change, adapting to different screen sizes.
 // Extra small screen / phone
 $screen-xs-min: 480px !default;
-// Small screen / tablet  
+// Small screen / tablet
 $screen-sm-min: 768px !default;
 // Medium screen / desktop
 $screen-md-min: 992px !default;
 // Large screen / wide desktop
 $screen-lg-min : 1200px !default;
-// Large scree / wider desktop      
+// Large scree / wider desktop
 $screen-lg-med : 1260px !default;
 // So media queries don't overlap when required, provide a maximum
 $screen-xs-max: ($screen-sm-min - 1) !default; // 767px
 $screen-sm-max: ($screen-md-min - 1) !default; // 991px
-$screen-md-max: ($screen-lg-min - 1) !default; // 1199px  
+$screen-md-max: ($screen-lg-min - 1) !default; // 1199px
 //## Image  paths
-$global-img-path: './../img/' !default;
-$page-img-path: './../img/' !default;
+$global-img-path: './assets/img/' !default;
+$page-img-path: './assets/img/' !default;
 $page-media-path: './../media/' !default;
 // Metronic grid system
 $m-layout-breakpoints: ( // Small screen / phone

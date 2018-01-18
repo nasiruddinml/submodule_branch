@@ -233,11 +233,11 @@ Rot Details
 ***/
 
 .dataTable .row-details.row-details-close {
-  background: url("./../img/datatable-row-openclose.png") no-repeat 0 0;
+  background: url($asset-path + "img/datatable-row-openclose.png") no-repeat 0 0;
 }
 
 .dataTable .row-details.row-details-open {
-  background: url("./../img/datatable-row-openclose.png") no-repeat 0 -23px;
+  background: url($asset-path + "img/datatable-row-openclose.png") no-repeat 0 -23px;
 }
 
 
@@ -257,23 +257,23 @@ table.dataTable thead .sorting_desc_disabled {
 }
 
 table.dataTable thead .sorting {
-  background: url('./../img/datatable/sort_both.png') no-repeat center right;
+  background: url($asset-path + 'img/datatable/sort_both.png') no-repeat center right;
 }
 
 table.dataTable thead .sorting_asc {
-  background: url('./../img/datatable/sort_asc.png') no-repeat center right;
+  background: url($asset-path + 'img/datatable/sort_asc.png') no-repeat center right;
 }
 
 table.dataTable thead .sorting_desc {
-  background: url('./../img/datatable/sort_desc.png') no-repeat center right;
+  background: url($asset-path + 'img/datatable/sort_desc.png') no-repeat center right;
 }
 
 table.dataTable thead .sorting_asc_disabled {
-  background: url('./../img/datatable/sort_asc_disabled.png') no-repeat center right;
+  background: url($asset-path + 'img/datatable/sort_asc_disabled.png') no-repeat center right;
 }
 
 table.dataTable thead .sorting_desc_disabled {
-  background: url('./../img/datatable/sort_desc_disabled.png') no-repeat center right;
+  background: url($asset-path + 'img/datatable/sort_desc_disabled.png') no-repeat center right;
 }
 
 table.dataTable th:active {

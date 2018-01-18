@@ -11,7 +11,7 @@
 
 /* FONT PATH$glyphicons-font-path
  * -------------------------- */
-$glyphicons-font-path : "./../fonts/bootstrap" !default;
+$glyphicons-font-path : "./assets/fonts/bootstrap" !default;
 
 @at-root {
   // Import the fonts
@@ -22,7 +22,7 @@ $glyphicons-font-path : "./../fonts/bootstrap" !default;
     url('#{$glyphicons-font-path}/glyphicons-halflings-regular.woff') format('woff'),
     url('#{$glyphicons-font-path}/glyphicons-halflings-regular.woff2') format('woff2'),
     url('#{$glyphicons-font-path}/glyphicons-halflings-regular.ttf') format('truetype'),
-    url('#{$glyphicons-font-path}/glyphicons-halflings-regular.svg#glyphicons-halflings-regular') format('svg');  
+    url('#{$glyphicons-font-path}/glyphicons-halflings-regular.svg#glyphicons-halflings-regular') format('svg');
   }
 }
 
